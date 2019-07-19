@@ -1,11 +1,12 @@
 const express = require('express');
-
+const keys = require('./config/keys');
+const mongoose = require('mongoose');
+require('./models/User');
 require('./services/passport');
-
+mongoose.connect(keys.mongoDB);
 const app = express();
 
 require('./routes/authRoutes')(app);
-// checking master branch
 
 const PORT = 5000;
 

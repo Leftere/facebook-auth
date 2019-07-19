@@ -18,6 +18,5 @@ app.get('/auth/facebook',
 app.get('/auth/facebook/callback', passport.authenticate('facebook'));
 
 
-
 }
 
